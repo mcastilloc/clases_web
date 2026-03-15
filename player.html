@@ -1,0 +1,61 @@
+<button onclick="prev()">⏮</button> <button onclick="play()">▶</button> <button onclick="pause()">⏸</button> <button
+    onclick="next()">⏭</button>
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Player</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="header">
+
+<button class="home-btn"
+onclick="goHome()">
+← Módulos </button>
+
+<h1 id="titulo"></h1>
+
+</div>
+
+
+    <div class="layout">
+
+        <div id="sidebar"></div>
+
+        <div class="main">
+
+            <div class="topbar">
+
+                <button onclick="play()">▶</button> <button onclick="pause()">⏸</button>
+
+                <input type="range" id="seek" min="0" max="100" value="0" oninput="seekVideo()">
+
+            </div>
+
+            <div class="video-container">
+
+                <video id="pantalla"></video> <video id="webcam"></video>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="js/data.js"></script>
+
+    <script src="js/player.js"></script>
+
+</body>
+
+</html>
+

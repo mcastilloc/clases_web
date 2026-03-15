@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<h1>Seleccionar parte</h1>
+
+<div class="grid">
+
+<a id="p1" class="card">Parte 1</a> <a id="p2" class="card">Parte 2</a>
+
+</div>
+
+<script>
+
+const params = new URLSearchParams(window.location.search);
+
+const m = params.get("m");
+const c = params.get("c");
+
+document.getElementById("p1").href =
+"player.html?m=" + m + "&c=" + c + "&p=1";
+
+document.getElementById("p2").href =
+"player.html?m=" + m + "&c=" + c + "&p=2";
+
+</script>
+
+</body>
+</html>

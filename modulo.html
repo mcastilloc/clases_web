@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<h1 id="titulo"></h1>
+
+<div id="lista" class="grid"></div>
+
+<script src="js/data.js"></script>
+
+<script>
+
+const params = new URLSearchParams(window.location.search);
+
+const m = params.get("m");
+
+document.getElementById("titulo").innerText =
+data[m].nombre;
+
+let lista = document.getElementById("lista");
+
+data[m].clases.forEach(c => {
+
+let a = document.createElement("a");
+
+a.href =
+"clase.html?m=" + m + "&c=" + c;
+
+a.className = "card";
+
+a.innerText = "Clase " + c;
+
+lista.appendChild(a);
+
+});
+
+</script>
+
+</body>
+</html>
